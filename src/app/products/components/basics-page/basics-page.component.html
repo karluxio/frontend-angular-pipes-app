@@ -1,1 +1,74 @@
-<p>basics-page works!</p>
+<p-panel header="Basic Pipes" class="p-1">
+  <p>Pipes included in Angular - usually it comes with common module</p>
+</p-panel>
+
+<div class="grid mt-4">
+  <div class="col-12 md:col-4">
+    <p-card header="uppercase">{{ nameLower | uppercase }}</p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="lowercase">{{ nameUpper | lowercase }}</p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="titlecase">{{ nameFull | titlecase }}</p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Dates with Pipes">
+      <ol>
+        <li>customDate</li>
+        <li>customDate | date</li>
+        <li>customDate | date : "short"</li>
+        <li>customDate | date : "long"</li>
+        <li>customDate | date : "MMMM"</li>
+        <li>customDate | date : "MM dd, YYYY"</li>
+      </ol>
+
+      <hr />
+
+      <ol>
+        <li>customDate | date : "long" : "GMT-3"</li>
+        <li>customDate | date : "long" : "GMT-4"</li>
+        <li>customDate | date : "long" : "GMT-6"</li>
+      </ol>
+
+      <hr />
+
+      <ol>
+        <li>customDate | date : "long" : "GMT-3" : "es-AR"</li>
+        <li>customDate | date : "long" : "GMT-3" : "en-US"</li>
+        <li>customDate | date : "long" : "GMT-3" : "fr-CA"</li>
+      </ol>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Resulting Dates">
+      <ol>
+        <li>{{ customDate }}</li>
+        <li>{{ customDate | date }}</li>
+        <li>{{ customDate | date : "short" }}</li>
+        <li>{{ customDate | date : "long" }}</li>
+        <li>{{ customDate | date : "MMMM" }}</li>
+        <li>{{ customDate | date : "MM dd, YYYY" }}</li>
+      </ol>
+      <hr />
+
+      <ol>
+        <li>{{ customDate | date : "long" : "GMT-3" }}</li>
+        <li>{{ customDate | date : "long" : "GMT-4" }}</li>
+        <li>{{ customDate | date : "long" : "GMT-6" }}</li>
+      </ol>
+
+      <hr />
+
+      <ol>
+        <li>{{ customDate | date : "long" : "" : "es-AR" }}</li>
+        <li>{{ customDate | date : "long" : "" : "en-US" }}</li>
+        <li>{{ customDate | date : "long" : "" : "fr-CA" }}</li>
+      </ol>
+    </p-card>
+  </div>
+</div>
