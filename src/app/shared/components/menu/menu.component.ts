@@ -17,14 +17,17 @@ export class MenuComponent implements OnInit {
           {
             label: 'Dates and Texts',
             icon: 'pi pi-align-left',
+            routerLink: '/basics',
           },
           {
             label: 'Numbers',
             icon: 'pi pi-dollar',
+            routerLink: '/numbers',
           },
           {
-            label: 'Not Commons',
+            label: 'UnCommons',
             icon: 'pi pi-globe',
+            routerLink: '/uncommon',
           },
         ],
       },
